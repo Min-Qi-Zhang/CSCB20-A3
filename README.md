@@ -3,9 +3,9 @@
 # Author: Min Qi Zhang, Zhuolin Cai
 
 # How To Run
-1. run "python app.py" in cmd
-2. open http://localhost:5000/ in browser (recommand google chrome)
-3. sign in as:
+1. Run "python app.py" in terminal
+2. Open http://localhost:5000/ in browser
+3. Sign in as:
 	user: instructor1
 	password: instructor1
    (Check out assignment3.db for other accounts)
