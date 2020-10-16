@@ -1,0 +1,64 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='grades.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='basic_style.css') }}">
+
+	<script>
+	
+	</script>
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <img src="../static/ut-logo.png" width="80" style="vertical-align: middle">
+            <b>CSCB20 - Introduction to Databases and Web Applications</b>
+        </div>
+    </header>
+	<nav id="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/announcement">Announcement</a></li>
+                <li><a href="/calendar">Calendar</a></li>
+                <li><a href="/student/feedback">Feedback</a></li>
+                <li><a href="/">Page</a></li>
+                <li><a href="/resources">Resources</a>
+                    <ul>
+                        <li><a href="/assignment">Assignment</a></li>
+                        <li><a href="/lecture">Lecture</a></li>
+                        <li><a href="/lab">Lab</a></li>
+                        <li><a href="/tests">Tests</a></li>
+                        <li><a href="/course_team">Course Team</a></li>
+                    </ul>
+                </li>
+                <li><a href="/logout">Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container1">
+	Logged in as {{name}}. <a href="/logout">Logout</a>
+	
+	{% for term, mark in marks.items() %}
+        <div>
+		<p>
+		
+		
+		<form method="post" action="/grade/handdle_request" method = "post"  style="margin:0px;display:inline;">
+		{{ term }} : <b>{{ mark }}</b>
+			<input type=submit value="remark request" {% if request[term] != 0 %}disabled="disabled" {% endif%}>
+			<input type=text name=explain  {% if request[term] != 0 %}disabled="disabled" value="{{request[term]}}"{% endif%}>
+			<input type="hidden" name=field value="{{ term }}"> 
+		</form>
+		
+		
+		</p>
+		</div>
+    {% endfor %}
+	
+	<a href="/">back</a>
+	</div>
+	
+</body>
+</html>

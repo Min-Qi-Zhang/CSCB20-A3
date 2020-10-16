@@ -1,0 +1,48 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='basic_style.css') }}">
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container">
+            <img src="../static/ut-logo.png">
+            <b>CSCB20 - Introduction to Databases and Web Applications</b>
+        </div>
+    </header>
+
+
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <p class="container"><a href="/register">Register</a></p>
+    <div class="blank"></div>
+
+    <form class="container2" method="post">
+        <div>
+            Username: <input type=text name=username>
+        </div>
+
+        <div>
+            Password: <input type=password name=password>
+        </div>
+
+        <div>
+            <label>Login as a </label>
+            <select name="type">
+                <option value="student">Student</option>
+                <option value="instructor">Instructor</option>
+            </select>
+        </div>
+
+        <div>
+            <input type=submit value="Log in">
+        </div>
+    </form>
+
+
+</body>
+</html>

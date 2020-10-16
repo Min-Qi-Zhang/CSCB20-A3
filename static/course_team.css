@@ -1,0 +1,21 @@
+.centre{
+    text-align: center;
+}
+
+@media(min-width:650px){
+    .container-1{
+        width: 70%;
+        margin: auto;
+        align-content: center;
+        display: flex;
+    }
+}
+
+.box1{
+    flex-basis: 30em;
+    text-align: center;
+}
+
+.image{
+    width: 150px;
+}

@@ -1,0 +1,35 @@
+.attention{
+    color: crimson;
+    width: 60%;
+    margin: auto;
+    font-size: 20px;
+ }
+
+ .editMark{
+    text-align: center;
+}
+
+.editMark input[type="text"]{
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 15px;
+}
+
+.editMark div{
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+.editMark input[type=submit]{
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: rgb(91, 148, 212);
+    color: white;
+    font: bold;
+}
+
+.editMark input[type=submit]:hover{
+    background-color: rgb(113, 175, 247);
+}

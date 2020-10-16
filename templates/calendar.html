@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSCB20 - Introduction to Databases and Web Applications</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='calendar.css') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='basic_style.css') }}">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <img src="../static/ut-logo.png">
+            <b>CSCB20 - Introduction to Databases and Web Applications</b>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/announcement">Announcement</a></li>
+                <li><a href="/calendar">Calendar</a></li>
+                <li><a href="/student/feedback">Feedback</a></li>
+                <li><a href="/">Page</a></li>
+                <li><a href="/resources">Resources</a>
+                    <ul>
+                        <li><a href="/assignment">Assignment</a></li>
+                        <li><a href="/lecture">Lecture</a></li>
+                        <li><a href="/lab">Lab</a></li>
+                        <li><a href="/tests">Tests</a></li>
+                        <li><a href="/course_team">Course Team</a></li>
+                    </ul>
+                </li>
+                <li><a href="/logout">Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="blank"></div>
+    <!-------------------------------Edit the Code Below------------------------------>
+
+
+    <div class="container">
+        <h1 class="centre">Calendar</h1>
+        
+    </div>
+
+    <iframe
+        src="https://calendar.google.com/calendar/embed?src=minqi0303%40gmail.com&ctz=America%2FToronto" 
+            width="1000" height="700" frameborder="0" scrolling="no">
+    </iframe>
+    
+
+    <!---------------------------------------------------------------------->
+    <div class="blank"></div>
+
+    <footer id="main-footer">
+        <div>
+            <a href="http://web.cs.toronto.edu/">Faculty of Computer Science</a>
+        </div>
+        Site design by Min Qi Zhang and Zhuolin Cai  
+    </footer>
+
+</body>
+</html>

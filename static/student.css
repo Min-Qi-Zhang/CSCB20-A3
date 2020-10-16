@@ -1,0 +1,19 @@
+.centre{
+    text-align: center;
+}
+
+.container-1{
+    width: 60%;
+    margin: auto;
+}
+
+.submit{
+    background-color: rgb(255, 255, 255);
+    color: rgb(15, 15, 80);
+    padding: 10px 15px;
+}
+
+.submit:hover{
+    background-color: rgb(240, 240, 240);
+    color: red;
+}

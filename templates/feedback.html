@@ -1,0 +1,90 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='feedback.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='basic_style.css') }}">
+	<script type="text/javascript" language="javascript">
+	function sumbit_form()
+	{
+		alert("Success!")
+	}
+	</script>
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <img src="../static/ut-logo.png" width="80" style="vertical-align: middle">
+            <b>CSCB20 - Introduction to Databases and Web Applications</b>
+        </div>
+    </header>
+	<nav id="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/announcement">Announcement</a></li>
+                <li><a href="/calendar">Calendar</a></li>
+                <li><a href="/student/feedback">Feedback</a></li>
+                <li><a href="/">Page</a></li>
+                <li><a href="/resources">Resources</a>
+                    <ul>
+                        <li><a href="/assignment">Assignment</a></li>
+                        <li><a href="/lecture">Lecture</a></li>
+                        <li><a href="/lab">Lab</a></li>
+                        <li><a href="/tests">Tests</a></li>
+                        <li><a href="/course_team">Course Team</a></li>
+                    </ul>
+                </li>
+                <li><a href="/logout">Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<div class="blank"></div>
+    <div class="container1">
+	Logged in as {{name}}. <a href="/logout">Logout</a>
+	<br />
+	
+	<form action="/grade/handdle_feedback" method="post">
+		<div>
+			<label>Select Instructor: </label>
+			
+			<select name="tid">
+				{% for tid, name in instructor_info.items() %}
+				<option value="{{tid}}">{{name}}</option></br>
+				{% endfor %}
+			</select>
+		</div>
+		
+		<div>
+			What do you like about the instructor teaching? </br>
+			<textarea name=like_t  rows="5" cols="50"> </textarea>
+		</div>
+
+		<div>
+			What do you recommend the instructor to do to improve their teaching? </br>
+			<textarea name=recommend_t  rows="5" cols="50"> </textarea>
+		</div>
+		
+		<div>
+			What do you like about the labs? <br>
+			<textarea name=like_l  rows="5" cols="50"> </textarea>
+		</div>
+		
+		<div>
+			What do you recommend the lab instructors to do to improve their lab teaching? </br>
+			<textarea name=recommend_l  rows="5" cols="50"> </textarea>
+		</div>
+
+		
+
+		<div>
+			<input id=submit type=submit value="Submit" onclick="sumbit_form()">
+		</div>
+    </form>
+	
+	<a href="/">back</a>
+	</div>
+	
+</body>
+</html>

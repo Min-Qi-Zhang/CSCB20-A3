@@ -1,0 +1,27 @@
+
+
+.centre{
+    text-align: center;
+}
+
+.mention{
+    width: 80%;
+    color: red;
+    padding-left: 50px;
+}
+
+.container-1{
+    display: block;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+}
+
+.container-1 div{
+    text-align: center;
+    border-bottom: 1px solid #666;
+}
+
+.container-1 div:hover{
+    color: rgb(212, 0, 0);
+}

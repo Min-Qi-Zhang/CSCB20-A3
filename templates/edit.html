@@ -1,0 +1,78 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <title>CSCB20 - Introduction to Databases and Web Applications</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='edit.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='basic_style.css') }}">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <img src="../static/ut-logo.png">
+            <b>CSCB20 - Introduction to Databases and Web Applications</b>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/announcement">Announcement</a></li>
+                <li><a href="/calendar">Calendar</a></li>
+                <li><a href="/student/feedback">Feedback</a></li>
+                <li><a href="/">Page</a></li>
+                <li><a href="/resources">Resources</a>
+                    <ul>
+                        <li><a href="/assignment">Assignment</a></li>
+                        <li><a href="/lecture">Lecture</a></li>
+                        <li><a href="/lab">Lab</a></li>
+                        <li><a href="/tests">Tests</a></li>
+                        <li><a href="/course_team">Course Team</a></li>
+                    </ul>
+                </li>
+                <li><a href="/logout">Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class='blank'></div>
+    <!--------------------------------------------------------------------->
+
+    
+
+    <div class="attention">
+        Please make sure that the following conditions are satisfied:<br>
+            <ul>
+                <li>The student ID must be a 6 digit number</li>
+                <li>Each field must be filled in, otherwise the corresponding unfilled marks will be erased</li>
+                <li>All marks should be an integer</li>
+            </ul>  
+    </div>
+
+
+    <div class="editMark">
+        <form method="post" action="/editmark">
+            <div>Enter the Student ID: <input type="text" name="sid"></input><br></div>
+            <div>Enter new Quiz 1 Mark: <input type="text" name="quiz1"></input><br></div>
+            <div>Enter new Quiz 2 Mark: <input type="text" name="quiz2"></input><br></div>
+            <div>Enter new Quiz 3 Mark: <input type="text" name="quiz3"></input><br></div>
+            <div>Enter new Midterm Exam: <input type="text" name="mid"></input><br></div>
+            <div>Enter new A1 Mark: <input type="text" name="a1"></input><br></div>
+            <div>Enter new A2 Mark: <input type="text" name="a2"></input><br></div>
+            <div class="blank"></div>
+            <div><input type="submit" value="Save Changes"></div>
+        </form>
+    </div>
+
+<!---------------------------------------------------------------------->
+    <div class="blank"></div>
+    <div class="blank"></div>
+
+    <footer id="main-footer">
+        <div>
+            <a href="http://web.cs.toronto.edu/">Faculty of Computer Science</a>
+        </div>
+        Site design by Min Qi Zhang and Zhuolin Cai  
+    </footer>
+</body>
+</html>

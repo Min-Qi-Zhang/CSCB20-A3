@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSCB20 - Introduction to Databases and Web Applications</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ifeedback.css') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='basic_style.css') }}">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <img src="../static/ut-logo.png">
+            <b>CSCB20 - Introduction to Databases and Web Applications</b>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/announcement">Announcement</a></li>
+                <li><a href="/calendar">Calendar</a></li>
+                <li><a href="/student/feedback">Feedback</a></li>
+                <li><a href="/">Page</a></li>
+                <li><a href="/resources">Resources</a>
+                    <ul>
+                        <li><a href="/assignment">Assignment</a></li>
+                        <li><a href="/lecture">Lecture</a></li>
+                        <li><a href="/lab">Lab</a></li>
+                        <li><a href="/tests">Tests</a></li>
+                        <li><a href="/course_team">Course Team</a></li>
+                    </ul>
+                </li>
+                <li><a href="/logout">Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="blank"></div>
+    <!-------------------------------Edit the Code Below------------------------------>
+    <div class="container">
+        <h1 class="centre">Remark Request</h1>
+    </div>
+
+        <div class="container4">
+            <div class="box">
+                <div class="ques"></div>
+                <div class="ques">Quiz 1</div>
+                <div class="ques">Quiz 2</div>
+                <div class="ques">Quiz 3</div>
+                <div class="ques">Midterm Exam</div>  
+                <div class="ques">Assignment 1</div>  
+                <div class="ques">Assignment 2</div>  
+            </div> 
+        </div>
+        
+
+        <div class="container4">
+            {% for row in data %}
+                <div class="box">
+                    <div><b>Student ID </br> {{row.SID}} </b></div>
+                    <div>{{row.quiz1}}</div>
+                    <div>{{row.quiz2}}</div>
+                    <div>{{row.quiz3}}</div>
+                    <div>{{row.midterm}}</div>
+                    <div>{{row.A1}}</div>
+                    <div>{{row.A2}}</div>  
+                </div> 
+            {% endfor %}
+        </div>
+        
+
+    <!---------------------------------------------------------------------->
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+
+    <footer id="main-footer">
+        <div>
+            <a href="http://web.cs.toronto.edu/">Faculty of Computer Science</a>
+        </div>
+        Site design by Min Qi Zhang and Zhuolin Cai  
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='basic_style.css') }}">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <img src="../static/ut-logo.png">
+            <b>CSCB20 - Introduction to Databases and Web Applications</b>
+        </div>
+    </header>
+
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+
+    <p class="container"><a href="/login">Login</a></p>
+
+    <p>
+        <h1 class="title">Registration Form</h1>
+    </p>
+
+    <form class="container3" method="post">
+        <div class="container3-1">
+            <div>
+                Last Name <input type="text" name="last">
+            </div>
+
+            <div>
+                First Name <input type="text" name="first">
+            </div>
+        </div>
+        
+
+        <div class="container3-1">
+            <div>
+                Username <input type=text name=username>
+            </div>
+
+            <div>
+                Password <input type=password name=password>
+            </div>
+        </div>
+        
+
+        <div class="container3-2">
+            <label>Account type</label>
+            <select name="type">
+                <option value="student">Student</option>
+                <option value="instructor">Instructor</option>
+            </select>
+        </div>
+
+        <div>
+            <input type=submit value="Register">
+        </div>
+    </form>
+
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSCB20 - Introduction to Databases and Web Applications</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ifeedback.css') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='basic_style.css') }}">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <img src="../static/ut-logo.png">
+            <b>CSCB20 - Introduction to Databases and Web Applications</b>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/announcement">Announcement</a></li>
+                <li><a href="/calendar">Calendar</a></li>
+                <li><a href="/student/feedback">Feedback</a></li>
+                <li><a href="/">Page</a></li>
+                <li><a href="/resources">Resources</a>
+                    <ul>
+                        <li><a href="/assignment">Assignment</a></li>
+                        <li><a href="/lecture">Lecture</a></li>
+                        <li><a href="/lab">Lab</a></li>
+                        <li><a href="/tests">Tests</a></li>
+                        <li><a href="/course_team">Course Team</a></li>
+                    </ul>
+                </li>
+                <li><a href="/logout">Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="blank"></div>
+    <!-------------------------------Edit the Code Below------------------------------>
+    <div class="container">
+        <h1 class="centre">Anonymous Feedback</h1>
+    </div>
+
+        <div class="container4">
+            <div class="box">
+                <div class="ques">What do you like about the instructor teaching? </div>
+                <div class="ques">What would you recommend the instructor to do to improve their teaching?</div>
+                <div class="ques">What do you like about the labs?</div>
+                <div class="ques">What do you recommend the lab instructors to do to improve their lab teaching?</div>  
+            </div> 
+        </div>
+        
+
+        <div class="container4">
+            {% for row in data %}
+                <div class="box">
+                    <!--<div><b>Instructor ID </br> {{row.TID}} </b></div>-->
+                    <div>{{row.like_t}}</div>
+                    <div>{{row.recommend_t}}</div>
+                    <div>{{row.like_l}}</div>
+                    <div>{{row.recommend_l}}</div>  
+                </div> 
+            {% endfor %}
+        </div>
+        
+
+    <!---------------------------------------------------------------------->
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+
+    <footer id="main-footer">
+        <div>
+            <a href="http://web.cs.toronto.edu/">Faculty of Computer Science</a>
+        </div>
+        Site design by Min Qi Zhang and Zhuolin Cai  
+    </footer>
+
+</body>
+</html>

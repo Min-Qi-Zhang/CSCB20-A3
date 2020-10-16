@@ -1,0 +1,61 @@
+.centre{
+    text-align: center;
+}
+
+.container-1{
+    width: 60%;
+    margin: auto;
+}
+
+.submit{
+    background-color: rgb(255, 255, 255);
+    color: rgb(15, 15, 80);
+    padding: 10px 15px;
+}
+
+.submit:hover{
+    background-color: rgb(240, 240, 240);
+    color: red;
+}
+
+.container4{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    text-align: auto;
+    font-size: 20px;
+}
+
+@media(min-width:500px){
+    .box{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 15px;
+        border-bottom: 1px dashed gray;
+    }
+}
+
+.box div{
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+}
+
+.ques{
+    color: mediumblue;
+}
+
+button{
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: white;
+    color: blue;
+    font: bold;
+}
+
+button:hover{
+    background-color: gainsboro;
+}
+

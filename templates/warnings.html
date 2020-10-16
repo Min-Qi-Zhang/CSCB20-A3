@@ -1,0 +1,41 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='basic_style.css') }}">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <img src="../static/ut-logo.png">
+            <b>CSCB20 - Introduction to Databases and Web Applications</b>
+        </div>
+    </header>
+
+    {% if warning == 'notlogin'%}
+        <div class="container1">Please <a href="/login">sign in</a> or <a href="/register">create an account</a>. </div>
+    {% elif warning == 'incorrectlogin'%}
+        <div class="container1">The username or password is incorrect! <a href="/login">Back to login page</a></div>
+    {% elif warning == 'userexist' %}
+        <div class="container1">This user already exist! <a href="/register">Back to register page</a></div>
+    {% elif warning == 'emptyInput' %}
+        <div class="container1">Please fill in each box! <a href="/register">Back to register page</a></div>
+    {% elif warning == 'registerSuccess' %}    
+        <div class="container1">
+            <h2>Registration Successful!</h2>
+            <a href="/login">Back to login page</a>
+        </div>
+    {% elif warning == 'notInt' %}
+        <div class="container1">
+            Please fill in each box and make sure the marks are whole numbers! 
+            <a href="/editmark">Back to edit</a>
+        </div>
+    {% elif warning == 'invalidID' %}
+        <div class="container1">
+            The student ID is not valid! Please make sure that the ID is a 6 digit number! 
+            <a href="/editmark">Back to edit</a>
+        </div>
+    {% endif%}
+</body>
+</html>

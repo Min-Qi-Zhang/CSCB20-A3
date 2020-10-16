@@ -1,0 +1,123 @@
+body{
+    background-color: white;
+    color: black;
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.6em;
+}
+
+img{
+    width: 80px;
+    vertical-align: middle;
+}
+
+.blank{
+    padding-top: 50px;
+}
+/************************************************************/
+
+/*******************Header Style*****************************/
+#main-header{
+    width: 100%;
+    position: fixed;
+    background-color: rgb(15, 15, 80);
+    color: white;
+}
+
+#main-header b{
+    padding-left: 30px;
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+
+
+/*******************Navigation Bar Style*****************************/
+#navbar{
+    text-align: center;
+    width: 100%;
+    padding-top: 70px;
+    background: rgb(15, 15, 80);
+}
+
+#navbar ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: rgb(15, 15, 80);
+}
+
+#navbar ul li{
+    display: inline-block;
+    padding: 15px;
+    background-color: rgb(15, 15, 80);
+}
+
+#navbar ul li:hover ul{
+    display: block;
+}
+
+#navbar ul li ul{
+    position: absolute;
+    width: 200px;
+    display: none;
+}
+
+#navbar ul li ul li{ 
+    background: rgb(15, 15, 80); 
+    display: block; 
+}
+
+#navbar ul li ul li:hover{
+    background: #666;
+}
+
+#navbar ul li ul li:active{
+    color: red;
+}
+
+#navbar a{
+    text-decoration-style: dashed;
+    color: white;
+    font-size: 28px;
+}
+
+#navbar a:hover{
+    color: gold;
+}
+
+#navbar a:active{
+    color: red;
+}
+
+
+
+/*******************Footer Style*****************************/
+#main-footer{
+    background: rgb(15, 15, 80);
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+#main-footer a{
+    color: white;
+}
+
+#main-footer a:hover{
+    color: lightblue;
+}
+
+
+
+/*******************Container Style*****************************/
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.container a{
+    color: tomato;
+}

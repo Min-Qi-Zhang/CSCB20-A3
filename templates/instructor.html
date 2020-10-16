@@ -1,0 +1,71 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='instructor.css') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='basic_style.css') }}">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <img src="../static/ut-logo.png">
+            <b>CSCB20 - Introduction to Databases and Web Applications</b>
+        </div>
+    </header>
+
+    <nav id="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/announcement">Announcement</a></li>
+                <li><a href="/calendar">Calendar</a></li>
+                <li><a href="/student/feedback">Feedback</a></li>
+                <li><a href="/">Page</a></li>
+                <li><a href="/resources">Resources</a>
+                    <ul>
+                        <li><a href="/assignment">Assignment</a></li>
+                        <li><a href="/lecture">Lecture</a></li>
+                        <li><a href="/lab">Lab</a></li>
+                        <li><a href="/tests">Tests</a></li>
+                        <li><a href="/course_team">Course Team</a></li>
+                    </ul>
+                </li>
+                <li><a href="/logout">Log Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--------------------------------------------------------------------->
+
+    <div class="blank"></div>
+
+    <div class="container-1">
+        <h2>Welcome back, {{name}}!</h2></br>
+        <p>
+            Here are the things you can do: <br>
+            <div>
+                <ul>
+                    <li><a href="/instructor/view_grades">View the grades</a></li>
+                    <li><a href="/instructor/editmark">Edit the grades</a></li>
+                    <li><a href="/instructor/remark">View remark requests</a></li>
+                    <li><a href="/instructor/feedback">View feedbacks</a></li>
+                </ul>
+            </div>
+        </p>
+    </div>
+
+    <!---------------------------------------------------------------------->
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    <div class="blank"></div>
+    
+    <footer id="main-footer">
+        <div>
+            <a href="http://web.cs.toronto.edu/">Faculty of Computer Science</a>
+        </div>
+        Site design by Min Qi Zhang and Zhuolin Cai  
+    </footer>
+    
+</body>
+</html>
